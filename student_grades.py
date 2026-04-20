@@ -32,15 +32,20 @@ class StudentsGrades:
         return idxs
 
     def get_sorted(self):
-        self.scores = self.scores.copy()  # povodni seznam bez zmeny
-        for serazeno_od_konce in range(len(numbers)):
+        scores = self.scores.copy()  # povodni seznam bez zmeny
+        for serazeno_od_konce in range(len(scores)):
             has_changed = False
             print(serazeno_od_konce)
-            for pozice_porovnani in range(len(numbers) - 1 - serazeno_od_konce):
-                if numbers[pozice_porovnani] > numbers[pozice_porovnani + 1]:
+            for pozice_porovnani in range(len(scores) - 1 - serazeno_od_konce):
+                if scores[pozice_porovnani] > scores[pozice_porovnani + 1]:
                     has_changed = True
-                    numbers[pozice_porovnani], numbers[pozice_porovnani + 1] = numbers[pozice_porovnani + 1], numbers[
-                        porovnani]
+                    scores[pozice_porovnani], scores[pozice_porovnani + 1] = scores[pozice_porovnani + 1], scores[pozice_porovnani]
             if not has_changed:
                 break
-        return numbers
+        return scores
+
+    def main(self):
+        if __name__ == "__main__":
+            print(results.get_sorted())  # [38, 42, 50, 58, 67, 73, 85, 91, 100]
+            print(results.scores)  # [85, 42, 91, 67, 50, 73, 100, 38, 58]  ← beze změny
+            main()
