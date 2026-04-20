@@ -45,7 +45,16 @@ class StudentsGrades:
         return scores
 
     def main(self):
+        results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
+        print ("Pocet studentov:{results.count()}")
+        for i, body in enumerate(results.scores):
+            letter = results.get_letter (points)
+            print("Student {i}: {points} points - {letter}")
+
+        super = []
+        for i, g in enumerate(self.scores):
+            if g == 100:
+                super.append[i]
+        print("Studenti s plnym poctom: {super}")
         if __name__ == "__main__":
-            print(results.get_sorted())  # [38, 42, 50, 58, 67, 73, 85, 91, 100]
-            print(results.scores)  # [85, 42, 91, 67, 50, 73, 100, 38, 58]  ← beze změny
             main()
