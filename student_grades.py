@@ -48,7 +48,7 @@ class StudentsGrades:
         results = StudentsGrades([85, 42, 91, 67, 50, 73, 100, 38, 58])
         print ("Pocet studentov:{results.count()}")
         for i, body in enumerate(results.scores):
-            letter = results.get_letter (points)
+            letter = results.get_letter(points)
             print("Student {i}: {points} points - {letter}")
 
         super = []
@@ -56,5 +56,13 @@ class StudentsGrades:
             if g == 100:
                 super.append[i]
         print("Studenti s plnym poctom: {super}")
+        print("Zoradene vysledky: {results.get_sorted()}")
+
+        from sorting import random_numbers
+
+        random_results = StudentsGrades(random_numbers(30, 0, 100))
+        print(random_results.count())
+        print(random_results.get_sorted())
+
         if __name__ == "__main__":
             main()
