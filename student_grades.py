@@ -5,6 +5,9 @@ class StudentsGrades:
     def get_by_index(self, index):
         return self.scores[index]
 
+    def count(self):
+        return len(self.scores)
+
     def get_grade(self, index):
         score = self.scores[index]
         if score>= 90:
@@ -19,3 +22,8 @@ class StudentsGrades:
             return 'E'
         else:
             return 'F'
+
+    def find(self, looking4):
+        for s in scores:
+            if s == looking4 :
+                idx = scores.index(s)
