@@ -24,6 +24,23 @@ class StudentsGrades:
             return 'F'
 
     def find(self, looking4):
-        for s in scores:
+        idxs = []
+        for s in self.scores:
             if s == looking4 :
-                idx = scores.index(s)
+                idx = self.scores.index(s)
+                idxs.append(idx)
+        return idxs
+
+    def get_sorted(self):
+        self.scores = self.scores.copy()  # povodni seznam bez zmeny
+        for serazeno_od_konce in range(len(numbers)):
+            has_changed = False
+            print(serazeno_od_konce)
+            for pozice_porovnani in range(len(numbers) - 1 - serazeno_od_konce):
+                if numbers[pozice_porovnani] > numbers[pozice_porovnani + 1]:
+                    has_changed = True
+                    numbers[pozice_porovnani], numbers[pozice_porovnani + 1] = numbers[pozice_porovnani + 1], numbers[
+                        porovnani]
+            if not has_changed:
+                break
+        return numbers
